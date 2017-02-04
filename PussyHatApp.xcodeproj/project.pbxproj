@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		336E5DDA1E4669FF00E5E368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DD91E4669FF00E5E368 /* AppDelegate.swift */; };
+		336E5DDC1E4669FF00E5E368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DDB1E4669FF00E5E368 /* ViewController.swift */; };
+		336E5DDF1E4669FF00E5E368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336E5DDD1E4669FF00E5E368 /* Main.storyboard */; };
+		336E5DE11E4669FF00E5E368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336E5DE01E4669FF00E5E368 /* Assets.xcassets */; };
+		336E5DE41E4669FF00E5E368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336E5DE21E4669FF00E5E368 /* LaunchScreen.storyboard */; };
+		336E5DEF1E4669FF00E5E368 /* PussyHatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DEE1E4669FF00E5E368 /* PussyHatAppTests.swift */; };
+		336E5DFA1E4669FF00E5E368 /* PussyHatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DF91E4669FF00E5E368 /* PussyHatAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		336E5DEB1E4669FF00E5E368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336E5DCE1E4669FF00E5E368 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 336E5DD51E4669FF00E5E368;
+			remoteInfo = PussyHatApp;
+		};
+		336E5DF61E4669FF00E5E368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336E5DCE1E4669FF00E5E368 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 336E5DD51E4669FF00E5E368;
+			remoteInfo = PussyHatApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		336E5DD61E4669FF00E5E368 /* PussyHatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PussyHatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E5DD91E4669FF00E5E368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		336E5DDB1E4669FF00E5E368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		336E5DDE1E4669FF00E5E368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		336E5DE01E4669FF00E5E368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		336E5DE31E4669FF00E5E368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		336E5DE51E4669FF00E5E368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336E5DEA1E4669FF00E5E368 /* PussyHatAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PussyHatAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E5DEE1E4669FF00E5E368 /* PussyHatAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PussyHatAppTests.swift; sourceTree = "<group>"; };
+		336E5DF01E4669FF00E5E368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336E5DF51E4669FF00E5E368 /* PussyHatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PussyHatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E5DF91E4669FF00E5E368 /* PussyHatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PussyHatAppUITests.swift; sourceTree = "<group>"; };
+		336E5DFB1E4669FF00E5E368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		336E5DD31E4669FF00E5E368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DE71E4669FF00E5E368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DF21E4669FF00E5E368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		336E5DCD1E4669FF00E5E368 = {
+			isa = PBXGroup;
+			children = (
+				336E5DD81E4669FF00E5E368 /* PussyHatApp */,
+				336E5DED1E4669FF00E5E368 /* PussyHatAppTests */,
+				336E5DF81E4669FF00E5E368 /* PussyHatAppUITests */,
+				336E5DD71E4669FF00E5E368 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		336E5DD71E4669FF00E5E368 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				336E5DD61E4669FF00E5E368 /* PussyHatApp.app */,
+				336E5DEA1E4669FF00E5E368 /* PussyHatAppTests.xctest */,
+				336E5DF51E4669FF00E5E368 /* PussyHatAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		336E5DD81E4669FF00E5E368 /* PussyHatApp */ = {
+			isa = PBXGroup;
+			children = (
+				336E5DD91E4669FF00E5E368 /* AppDelegate.swift */,
+				336E5DDB1E4669FF00E5E368 /* ViewController.swift */,
+				336E5DDD1E4669FF00E5E368 /* Main.storyboard */,
+				336E5DE01E4669FF00E5E368 /* Assets.xcassets */,
+				336E5DE21E4669FF00E5E368 /* LaunchScreen.storyboard */,
+				336E5DE51E4669FF00E5E368 /* Info.plist */,
+			);
+			path = PussyHatApp;
+			sourceTree = "<group>";
+		};
+		336E5DED1E4669FF00E5E368 /* PussyHatAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				336E5DEE1E4669FF00E5E368 /* PussyHatAppTests.swift */,
+				336E5DF01E4669FF00E5E368 /* Info.plist */,
+			);
+			path = PussyHatAppTests;
+			sourceTree = "<group>";
+		};
+		336E5DF81E4669FF00E5E368 /* PussyHatAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				336E5DF91E4669FF00E5E368 /* PussyHatAppUITests.swift */,
+				336E5DFB1E4669FF00E5E368 /* Info.plist */,
+			);
+			path = PussyHatAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		336E5DD51E4669FF00E5E368 /* PussyHatApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E5DFE1E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatApp" */;
+			buildPhases = (
+				336E5DD21E4669FF00E5E368 /* Sources */,
+				336E5DD31E4669FF00E5E368 /* Frameworks */,
+				336E5DD41E4669FF00E5E368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PussyHatApp;
+			productName = PussyHatApp;
+			productReference = 336E5DD61E4669FF00E5E368 /* PussyHatApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		336E5DE91E4669FF00E5E368 /* PussyHatAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E5E011E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppTests" */;
+			buildPhases = (
+				336E5DE61E4669FF00E5E368 /* Sources */,
+				336E5DE71E4669FF00E5E368 /* Frameworks */,
+				336E5DE81E4669FF00E5E368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				336E5DEC1E4669FF00E5E368 /* PBXTargetDependency */,
+			);
+			name = PussyHatAppTests;
+			productName = PussyHatAppTests;
+			productReference = 336E5DEA1E4669FF00E5E368 /* PussyHatAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		336E5DF41E4669FF00E5E368 /* PussyHatAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E5E041E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppUITests" */;
+			buildPhases = (
+				336E5DF11E4669FF00E5E368 /* Sources */,
+				336E5DF21E4669FF00E5E368 /* Frameworks */,
+				336E5DF31E4669FF00E5E368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				336E5DF71E4669FF00E5E368 /* PBXTargetDependency */,
+			);
+			name = PussyHatAppUITests;
+			productName = PussyHatAppUITests;
+			productReference = 336E5DF51E4669FF00E5E368 /* PussyHatAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		336E5DCE1E4669FF00E5E368 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Sam Showalter";
+				TargetAttributes = {
+					336E5DD51E4669FF00E5E368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 25Y72JH26L;
+						ProvisioningStyle = Automatic;
+					};
+					336E5DE91E4669FF00E5E368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 25Y72JH26L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 336E5DD51E4669FF00E5E368;
+					};
+					336E5DF41E4669FF00E5E368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 25Y72JH26L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 336E5DD51E4669FF00E5E368;
+					};
+				};
+			};
+			buildConfigurationList = 336E5DD11E4669FF00E5E368 /* Build configuration list for PBXProject "PussyHatApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 336E5DCD1E4669FF00E5E368;
+			productRefGroup = 336E5DD71E4669FF00E5E368 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				336E5DD51E4669FF00E5E368 /* PussyHatApp */,
+				336E5DE91E4669FF00E5E368 /* PussyHatAppTests */,
+				336E5DF41E4669FF00E5E368 /* PussyHatAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		336E5DD41E4669FF00E5E368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E5DE41E4669FF00E5E368 /* LaunchScreen.storyboard in Resources */,
+				336E5DE11E4669FF00E5E368 /* Assets.xcassets in Resources */,
+				336E5DDF1E4669FF00E5E368 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DE81E4669FF00E5E368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DF31E4669FF00E5E368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		336E5DD21E4669FF00E5E368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E5DDC1E4669FF00E5E368 /* ViewController.swift in Sources */,
+				336E5DDA1E4669FF00E5E368 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DE61E4669FF00E5E368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E5DEF1E4669FF00E5E368 /* PussyHatAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		336E5DF11E4669FF00E5E368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336E5DFA1E4669FF00E5E368 /* PussyHatAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		336E5DEC1E4669FF00E5E368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 336E5DD51E4669FF00E5E368 /* PussyHatApp */;
+			targetProxy = 336E5DEB1E4669FF00E5E368 /* PBXContainerItemProxy */;
+		};
+		336E5DF71E4669FF00E5E368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 336E5DD51E4669FF00E5E368 /* PussyHatApp */;
+			targetProxy = 336E5DF61E4669FF00E5E368 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		336E5DDD1E4669FF00E5E368 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				336E5DDE1E4669FF00E5E368 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		336E5DE21E4669FF00E5E368 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				336E5DE31E4669FF00E5E368 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		336E5DFC1E4669FF00E5E368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		336E5DFD1E4669FF00E5E368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		336E5DFF1E4669FF00E5E368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		336E5E001E4669FF00E5E368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		336E5E021E4669FF00E5E368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PussyHatApp.app/PussyHatApp";
+			};
+			name = Debug;
+		};
+		336E5E031E4669FF00E5E368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PussyHatApp.app/PussyHatApp";
+			};
+			name = Release;
+		};
+		336E5E051E4669FF00E5E368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PussyHatApp;
+			};
+			name = Debug;
+		};
+		336E5E061E4669FF00E5E368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 25Y72JH26L;
+				INFOPLIST_FILE = PussyHatAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = samshowalter.PussyHatAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PussyHatApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		336E5DD11E4669FF00E5E368 /* Build configuration list for PBXProject "PussyHatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E5DFC1E4669FF00E5E368 /* Debug */,
+				336E5DFD1E4669FF00E5E368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		336E5DFE1E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E5DFF1E4669FF00E5E368 /* Debug */,
+				336E5E001E4669FF00E5E368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		336E5E011E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E5E021E4669FF00E5E368 /* Debug */,
+				336E5E031E4669FF00E5E368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		336E5E041E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				336E5E051E4669FF00E5E368 /* Debug */,
+				336E5E061E4669FF00E5E368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 336E5DCE1E4669FF00E5E368 /* Project object */;
+}
