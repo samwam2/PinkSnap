@@ -27,8 +27,31 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         //imagePickerController(imagePicker, didFinishPickingMediaWithInfo: "no")
     }
     
+    @IBOutlet var forHatview: UIImageView!
     let imagePicker = UIImagePickerController()
-    var imageHat = #imageLiteral(resourceName: "hat")
+    
+    var location = CGPoint(x: 0, y: 0)
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch : UITouch = touches.first as UITouch!
+        location = touch.location(in: self.view)
+        forHatview.center = location
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch : UITouch = touches.first as UITouch!
+        location = touch.location(in: self.view)
+        forHatview.center = location
+    }
+    
+    
+//    func moveHatImage() {
+//        let rect = CGRect(x: 0, y: 0, width: 100, height: 100) // CGFloat, Double, Int
+//        var hatView = UIImageView(frame: rect)
+//        hatView.image = UIImage(named: "hat")
+//        hatView.contentMode = .scaleToFill
+//        hatView.isUserInteractionEnabled = true
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -38,61 +61,25 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         }
         
         dismiss(animated: true, completion: nil)
-        self.detect()
+       // self.detect()
+        forHatview.center = CGPoint(x: 160, y: 330)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
-    func detect() {
-        let imageOptions =  NSDictionary(object: NSNumber(value: 5) as NSNumber, forKey: CIDetectorImageOrientation as NSString)
-        let personciImage = CIImage(cgImage: imageView.image!.cgImage!)
-        let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
-        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
-        let faces = faceDetector?.features(in: personciImage, options: imageOptions as? [String : AnyObject])
-        
-        if let face = faces?.first as? CIFaceFeature {
-            print("found bounds are \(face.bounds)")
-            
-            let alert = UIAlertController(title: "Say Cheese!", message: "We detected a face!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-            if face.hasSmile {
-                print("face is smiling");
-            }
-            
-            if face.hasLeftEyePosition {
-                print("Left eye bounds are \(face.leftEyePosition)")
-            }
-            
-            if face.hasRightEyePosition {
-                print("Right eye bounds are \(face.rightEyePosition)")
-            }
-        } else {
-            let alert = UIAlertController(title: "No Face!", message: "No face was detected", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
 
-    func showPicture() {
-       var imageThing = imagePicker
-        //imageView.image = imageThing
-    }
+
     
     override func viewDidLoad() {
-        imagePicker.delegate = self
-
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-      
+        imagePicker.delegate = self
+        //forHatview.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     

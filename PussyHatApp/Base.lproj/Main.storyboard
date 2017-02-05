@@ -22,30 +22,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Un-Cx-wWE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Un-Cx-wWE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-t3-kRv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-t3-kRv">
                                 <rect key="frame" x="31" y="629" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="lLt-FK-hag"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-DI-0n6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-DI-0n6">
                                 <rect key="frame" x="145" y="629" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Picture"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="Ktd-uG-1hi" eventType="touchUpInside" id="Vd1-tQ-Zc1"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="77z-y8-ZsL">
+                                <rect key="frame" x="148" y="131" width="82" height="66"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ic-ud-MSf" firstAttribute="top" secondItem="Urp-DI-0n6" secondAttribute="bottom" constant="8" symbolic="YES" id="BeA-IT-t80"/>
+                            <constraint firstItem="Urp-DI-0n6" firstAttribute="top" secondItem="7Un-Cx-wWE" secondAttribute="bottom" constant="18" id="BnT-Cx-o2I"/>
+                            <constraint firstItem="Urp-DI-0n6" firstAttribute="baseline" secondItem="FP0-t3-kRv" secondAttribute="baseline" id="CXf-N6-xiN"/>
+                            <constraint firstAttribute="trailing" secondItem="7Un-Cx-wWE" secondAttribute="trailing" id="PV4-1T-8w8"/>
+                            <constraint firstItem="Urp-DI-0n6" firstAttribute="trailing" secondItem="77z-y8-ZsL" secondAttribute="trailing" id="RHZ-L3-KdK"/>
+                            <constraint firstItem="7Un-Cx-wWE" firstAttribute="top" secondItem="y2c-wM-Uze" secondAttribute="top" id="WSU-OY-bnb"/>
+                            <constraint firstItem="Urp-DI-0n6" firstAttribute="centerX" secondItem="7Un-Cx-wWE" secondAttribute="centerX" id="YVM-fI-jON"/>
+                            <constraint firstItem="Urp-DI-0n6" firstAttribute="leading" secondItem="FP0-t3-kRv" secondAttribute="trailing" constant="80" id="fsY-Ml-VZQ"/>
+                            <constraint firstItem="7Un-Cx-wWE" firstAttribute="leading" secondItem="y2c-wM-Uze" secondAttribute="leading" id="uUS-zK-3ba"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="forHatview" destination="77z-y8-ZsL" id="3pL-mq-S8X"/>
                         <outlet property="imageView" destination="7Un-Cx-wWE" id="7Kx-gN-rB7"/>
                     </connections>
                 </viewController>
@@ -140,6 +152,7 @@
     <resources>
         <image name="backgroundGUI" width="375" height="667"/>
         <image name="cameraButton" width="125" height="124"/>
+        <image name="hat" width="224" height="159"/>
         <image name="instagramButton" width="124" height="124"/>
     </resources>
 </document>
