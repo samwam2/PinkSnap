@@ -14,6 +14,8 @@
 		336E5DE41E4669FF00E5E368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336E5DE21E4669FF00E5E368 /* LaunchScreen.storyboard */; };
 		336E5DEF1E4669FF00E5E368 /* PussyHatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DEE1E4669FF00E5E368 /* PussyHatAppTests.swift */; };
 		336E5DFA1E4669FF00E5E368 /* PussyHatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E5DF91E4669FF00E5E368 /* PussyHatAppUITests.swift */; };
+		82FEAB941E46B0AA003E82BB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEAB931E46B0AA003E82BB /* CoreImage.framework */; };
+		82FEAB961E46B0C1003E82BB /* faceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FEAB951E46B0C1003E82BB /* faceDetection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		336E5DF51E4669FF00E5E368 /* PussyHatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PussyHatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		336E5DF91E4669FF00E5E368 /* PussyHatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PussyHatAppUITests.swift; sourceTree = "<group>"; };
 		336E5DFB1E4669FF00E5E368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82FEAB931E46B0AA003E82BB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		82FEAB951E46B0C1003E82BB /* faceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceDetection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FEAB941E46B0AA003E82BB /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				336E5DED1E4669FF00E5E368 /* PussyHatAppTests */,
 				336E5DF81E4669FF00E5E368 /* PussyHatAppUITests */,
 				336E5DD71E4669FF00E5E368 /* Products */,
+				82FEAB921E46B0A9003E82BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +106,7 @@
 				336E5DD91E4669FF00E5E368 /* AppDelegate.swift */,
 				336E5DDB1E4669FF00E5E368 /* ViewController.swift */,
 				336E5DDD1E4669FF00E5E368 /* Main.storyboard */,
+				82FEAB951E46B0C1003E82BB /* faceDetection.swift */,
 				336E5DE01E4669FF00E5E368 /* Assets.xcassets */,
 				336E5DE21E4669FF00E5E368 /* LaunchScreen.storyboard */,
 				336E5DE51E4669FF00E5E368 /* Info.plist */,
@@ -123,6 +130,14 @@
 				336E5DFB1E4669FF00E5E368 /* Info.plist */,
 			);
 			path = PussyHatAppUITests;
+			sourceTree = "<group>";
+		};
+		82FEAB921E46B0A9003E82BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82FEAB931E46B0AA003E82BB /* CoreImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				336E5DDC1E4669FF00E5E368 /* ViewController.swift in Sources */,
+				82FEAB961E46B0C1003E82BB /* faceDetection.swift in Sources */,
 				336E5DDA1E4669FF00E5E368 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +528,7 @@
 				336E5E001E4669FF00E5E368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		336E5E011E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +537,7 @@
 				336E5E031E4669FF00E5E368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		336E5E041E4669FF00E5E368 /* Build configuration list for PBXNativeTarget "PussyHatAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +546,7 @@
 				336E5E061E4669FF00E5E368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

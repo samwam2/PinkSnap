@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Face Detection-->
         <scene sceneID="Gt0-Ot-Rp9">
             <objects>
-                <viewController id="Ktd-uG-1hi" sceneMemberID="viewController">
+                <viewController id="Ktd-uG-1hi" customClass="faceDetection" customModule="PussyHatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7y9-c2-hcq"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ic-ud-MSf"/>
@@ -20,12 +21,37 @@
                     <view key="view" contentMode="scaleToFill" id="y2c-wM-Uze">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Un-Cx-wWE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-t3-kRv">
+                                <rect key="frame" x="31" y="629" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lLt-FK-hag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-DI-0n6">
+                                <rect key="frame" x="145" y="629" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="Ktd-uG-1hi" eventType="touchUpInside" id="Vd1-tQ-Zc1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="7Un-Cx-wWE" id="7Kx-gN-rB7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msw-qS-w7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628" y="139"/>
+            <point key="canvasLocation" x="797.60000000000002" y="895.50224887556226"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -39,36 +65,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundGUI" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-7V-hC6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cameraButton" translatesAutoresizingMaskIntoConstraints="NO" id="pnH-vy-xfO">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-wt-pBb">
                                 <rect key="frame" x="16" y="229" width="154" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagramButton" translatesAutoresizingMaskIntoConstraints="NO" id="ugr-qx-hTC">
-                                <rect key="frame" x="205" y="229" width="154" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-wt-pBb">
-                                <rect key="frame" x="16" y="229" width="154" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="5R1-05-Qg5" kind="show" id="410-Tg-n6O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ime-6s-KCk">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ime-6s-KCk">
                                 <rect key="frame" x="205" y="229" width="154" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Ktd-uG-1hi" kind="show" id="T2R-NT-fvH"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGUI" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-7V-hC6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cameraButton" translatesAutoresizingMaskIntoConstraints="NO" id="pnH-vy-xfO">
+                                <rect key="frame" x="16" y="229" width="154" height="154"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="instagramButton" translatesAutoresizingMaskIntoConstraints="NO" id="ugr-qx-hTC">
+                                <rect key="frame" x="205" y="229" width="154" height="154"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pnH-vy-xfO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="209" id="2II-q9-vw7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dRm-7V-hC6" secondAttribute="bottom" id="4tH-G7-EHo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y9I-wt-pBb" secondAttribute="bottom" constant="284" id="7hH-6F-S3c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ime-6s-KCk" secondAttribute="bottom" constant="284" id="80Q-Z2-wYG"/>
+                            <constraint firstItem="pnH-vy-xfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8o4-7F-GIk"/>
+                            <constraint firstItem="ugr-qx-hTC" firstAttribute="leading" secondItem="pnH-vy-xfO" secondAttribute="trailing" constant="35" id="CzS-2v-dmQ"/>
+                            <constraint firstItem="dRm-7V-hC6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IcA-oX-sXx"/>
+                            <constraint firstItem="ugr-qx-hTC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KQe-OK-ifH"/>
+                            <constraint firstItem="y9I-wt-pBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="209" id="NJJ-oo-Yxo"/>
+                            <constraint firstItem="ugr-qx-hTC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="209" id="Nc1-D1-9an"/>
+                            <constraint firstItem="Ime-6s-KCk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="209" id="O7n-JJ-4jX"/>
+                            <constraint firstItem="dRm-7V-hC6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RCU-aI-Ou2"/>
+                            <constraint firstItem="Ime-6s-KCk" firstAttribute="leading" secondItem="pnH-vy-xfO" secondAttribute="trailing" constant="35" id="Wdy-Dd-U4G"/>
+                            <constraint firstItem="Ime-6s-KCk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iye-ID-u9J"/>
+                            <constraint firstItem="ugr-qx-hTC" firstAttribute="leading" secondItem="y9I-wt-pBb" secondAttribute="trailing" constant="35" id="jB2-U8-6Fr"/>
+                            <constraint firstAttribute="trailing" secondItem="dRm-7V-hC6" secondAttribute="trailing" id="m0Q-nZ-vpV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ugr-qx-hTC" secondAttribute="bottom" constant="284" id="qLP-8K-T5F"/>
+                            <constraint firstItem="y9I-wt-pBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qhY-jj-wys"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pnH-vy-xfO" secondAttribute="bottom" constant="284" id="wvy-Eo-UgJ"/>
+                            <constraint firstItem="ugr-qx-hTC" firstAttribute="leading" secondItem="pnH-vy-xfO" secondAttribute="trailing" constant="35" id="xgL-B5-E5B"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
