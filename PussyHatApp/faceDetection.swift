@@ -11,10 +11,11 @@ import CoreImage
 import UIKit
 
 class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-   
-      @IBOutlet var imageView: UIImageView!
     
-    @IBAction func takePhoto(_ sender: Any) {
+    @IBOutlet var imageView: UIImageView!
+    
+    
+    @IBAction func takePhoto2(_ sender: Any) {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
             return
         }
@@ -23,14 +24,15 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
-        
-        //imagePickerController(imagePicker, didFinishPickingMediaWithInfo: "no")
     }
     
     @IBOutlet var forHatview: UIImageView!
+    
     let imagePicker = UIImagePickerController()
     
     var location = CGPoint(x: 0, y: 0)
+    var hatSelected = UIImage()
+    var firstSelectedHat = #imageLiteral(resourceName: "hat1")
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch : UITouch = touches.first as UITouch!
@@ -45,13 +47,13 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
     
-//    func moveHatImage() {
-//        let rect = CGRect(x: 0, y: 0, width: 100, height: 100) // CGFloat, Double, Int
-//        var hatView = UIImageView(frame: rect)
-//        hatView.image = UIImage(named: "hat")
-//        hatView.contentMode = .scaleToFill
-//        hatView.isUserInteractionEnabled = true
-//    }
+    //    func moveHatImage() {
+    //        let rect = CGRect(x: 0, y: 0, width: 100, height: 100) // CGFloat, Double, Int
+    //        var hatView = UIImageView(frame: rect)
+    //        hatView.image = UIImage(named: "hat")
+    //        hatView.contentMode = .scaleToFill
+    //        hatView.isUserInteractionEnabled = true
+    //    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -61,7 +63,9 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         }
         
         dismiss(animated: true, completion: nil)
-       // self.detect()
+        // self.detect()
+        hatSelected = firstSelectedHat
+        forHatview.image = hatSelected
         forHatview.center = CGPoint(x: 160, y: 330)
     }
     
@@ -69,9 +73,43 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         dismiss(animated: true, completion: nil)
     }
     
-
-
+    @IBAction func changeToHatOne(_ sender: Any) {
+        var hatOne = #imageLiteral(resourceName: "hat1")
+        hatSelected = hatOne
+        forHatview.image = hatSelected
+        print("works one")
+    }
     
+    @IBAction func changeToHatTwo(_ sender: Any) {
+        var hatTwo = #imageLiteral(resourceName: "hat2")
+        hatSelected = hatTwo
+         forHatview.image = hatSelected
+        print("works 2")
+    }
+    
+    @IBAction func changeToHatThree(_ sender: Any) {
+        var hatThree = #imageLiteral(resourceName: "hat3")
+        hatSelected = hatThree
+         forHatview.image = hatSelected
+        print("worksThree")
+        
+    }
+    
+    
+    @IBAction func shareButton(_ sender: Any) {
+        //Set the default sharing message.
+        let imageShare = imageView
+        let message = "download app."
+        //Set the link to share.
+        if let link = NSURL(string: "http://yoururl.com")
+        {
+            let objectsToShare = [imageShare,message,link] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -81,6 +119,6 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     
 } // last clossing braket for the class

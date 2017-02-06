@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "iPhone 7GUI.png",
+      "filename" : "newRightGUI.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "newRightGUI-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "newRightGUI-2.png",
       "scale" : "3x"
     }
   ],
