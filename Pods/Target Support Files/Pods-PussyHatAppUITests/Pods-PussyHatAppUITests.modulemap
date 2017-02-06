@@ -1,0 +1,6 @@
+framework module Pods_PussyHatAppUITests {
+  umbrella header "Pods-PussyHatAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
