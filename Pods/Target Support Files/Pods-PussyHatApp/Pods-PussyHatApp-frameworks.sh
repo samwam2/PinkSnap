@@ -89,10 +89,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-iOS10.0/Mixpanel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-swift-iOS10.0/Mixpanel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-iOS10.0/Mixpanel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-swift-iOS10.0/Mixpanel.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

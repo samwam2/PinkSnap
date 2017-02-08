@@ -9,6 +9,7 @@
 import Foundation
 import CoreImage
 import UIKit
+import Mixpanel
 
 class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -78,6 +79,7 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
         hatSelected = hatOne
         forHatview.image = hatSelected
         print("works one")
+        
     }
     
     @IBAction func changeToHatTwo(_ sender: Any) {
@@ -98,6 +100,7 @@ class faceDetection: UIViewController, UIImagePickerControllerDelegate, UINaviga
     
     @IBAction func shareButton(_ sender: Any) {
         //Set the default sharing message.
+        Mixpanel.mainInstance().track(event: "shared picture")
         let imageShare = imageView
         let message = "download app."
         //Set the link to share.
